@@ -15,3 +15,4 @@ docker tag ${localname} ${reponame}
 docker push ${reponame}
 
 pause
+

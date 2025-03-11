@@ -5,3 +5,4 @@ spawn su -
 expect "Password:"
 send "$password\r"
 interact
+
