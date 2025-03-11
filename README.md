@@ -3,7 +3,7 @@
 sshh is a Docker image based on Debian, designed to serve as a hub for containers via SSH.
 
 - Access the container via SSH (be mindful of security risks).
-- Restrict access to specific users and IP addresses by configuring **ALLOW_USERS **(`/etc/ssh/sshd_config`).
+- Restrict access to specific users and IP addresses by configuring **ALLOW_USERS** (`/etc/ssh/sshd_config`).
 - Set user and group permissions with User ID and Group ID.
 - Execute commands at container startup using `StartupCommand`.
 - Automate command execution with `CronJob`.
