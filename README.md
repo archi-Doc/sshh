@@ -14,7 +14,7 @@ sshh is a Docker image based on Debian, designed to serve as a hub for container
 
 A simple `docker-compose.yml` sample.
 
-When using it in a real environment, be sure to generate connection keys and manage them carefully.
+When using it in a real environment, regenerate and replace the connection keys, and manage them carefully.
 
 ```yaml
 # Create host/ssh key: ssh-keygen -t ed25519 -f ~/mykey.sk -C mykey
@@ -45,5 +45,4 @@ services:
       StartupCommand1: "touch /home/ubuntu/Hello2" # Commands to execute when the container starts.
       CronJob1: "* * * * * touch /home/ubuntu/cronfile1" # Commands for automatic execution.
 ```
-
 
