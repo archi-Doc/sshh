@@ -101,6 +101,12 @@ fi
 echo
 EOF
 
+# .vimrc
+cat << 'EOF' > "${HOME_DIRECTORY}/.vimrc"
+set enc=utf-8
+set nocp
+EOF
+
 # Set SSH key
 mkdir -p "${HOME_DIRECTORY}/.ssh"
 echo "${SSH_PUBLIC_KEY}" > "${HOME_DIRECTORY}/.ssh/authorized_keys"

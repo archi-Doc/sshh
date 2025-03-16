@@ -11,7 +11,7 @@ volumes:
 
 services:
   ssh:
-    image: sshh
+    image: archidoc422/sshh
     ports:
       - "2222:2222"
     user: "2000:2000"
