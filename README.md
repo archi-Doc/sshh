@@ -12,7 +12,7 @@ sshh is a Docker image based on Debian, designed to serve as a hub for container
 
 ## Example
 
-A simple `docker-compose.yml` example.
+This is a simple example of a `docker-compose.yml`.
 
 When using it in a real environment, regenerate and replace the connection keys, and manage them carefully.
 
