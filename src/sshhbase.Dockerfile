@@ -1,4 +1,4 @@
-# docker buildx build --no-cache -f ./sshhbase.Dockerfile --platform=linux/amd64 -t sshhbase .
+# docker buildx build --no-cache -f ./src/sshhbase.Dockerfile --platform=linux/amd64 -t sshhbase .
 FROM debian:bookworm-slim
 
 RUN apt-get update && \
@@ -9,4 +9,3 @@ RUN apt-get update && \
 
 RUN mkdir /var/run/sshd
 RUN echo "root:abcd" | sudo chpasswd
-
