@@ -3,6 +3,7 @@
 set -e
 
 # Prepare
+SSHH_NAME="ssh hub container 0.1"
 SSH_PORT=${SSH_PORT:-2222}
 SSH_USER=${SSH_USER:-root}
 if [ -z "${SSH_PUBLIC_KEY}" ]; then
@@ -93,7 +94,7 @@ RRR
 #touch "${HOME_DIRECTORY}/.bash_profile"
 cat << 'EOF' > "${HOME_DIRECTORY}/.bash_profile"
 echo
-echo "  ssh hub container"
+echo "  ${SSHH_NAME}"
 if [ -n "$SSH_CONNECTION" ]; then
   CLIENT_INFO=$(echo "$SSH_CONNECTION" | awk '{print $1" "$2}')
   echo "  User:    $(whoami) ($(id -u):$(id -g))"
