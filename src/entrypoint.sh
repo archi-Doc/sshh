@@ -78,10 +78,9 @@ if [ -n "${RSYNC_CONF}" ]; then
 fi
 
 # MOTD
-{
-    echo ""
-    echo "ssh hub container"
-} > /etc/motd
+# {
+#    echo "ssh hub container"
+# } > /etc/motd
 
 mkdir -p "$HOME_DIRECTORY"
 chown -f "$SSH_USER:$SSH_USER" "$HOME_DIRECTORY"
@@ -93,6 +92,8 @@ RRR
 # Bash profile
 #touch "${HOME_DIRECTORY}/.bash_profile"
 cat << 'EOF' > "${HOME_DIRECTORY}/.bash_profile"
+echo
+echo "  ssh hub container"
 if [ -n "$SSH_CONNECTION" ]; then
   CLIENT_INFO=$(echo "$SSH_CONNECTION" | awk '{print $1" "$2}')
   echo "  User:    $(whoami) ($(id -u):$(id -g))"
