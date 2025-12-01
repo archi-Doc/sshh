@@ -2,4 +2,4 @@
 
 $localname="sshh"
 
-docker buildx build --no-cache -f ./src/sshhtemp.Dockerfile --platform=linux/amd64 -t ${localname} .
+docker buildx build --pull --no-cache -f ./src/sshhtemp.Dockerfile --platform=linux/amd64 -t ${localname} .

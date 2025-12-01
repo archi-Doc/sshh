@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 
 RUN apt-get update \
   && DEBIAN_FRONTEND=noninteractive apt-get install -yq --no-install-recommends sudo vim-tiny openssh-server rsync cron \
@@ -6,7 +6,7 @@ RUN apt-get update \
   && apt-get autoremove -y \
   && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 RUN echo "root:abcd" | sudo chpasswd
 
 EXPOSE 2222
