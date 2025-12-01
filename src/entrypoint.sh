@@ -3,7 +3,7 @@
 set -e
 
 # Prepare
-SSHH_NAME="SSH hub: 0.1"
+SSHH_NAME="SSH hub: 0.2"
 SSH_PORT=${SSH_PORT:-2222}
 SSH_USER=${SSH_USER:-root}
 if [ -z "${SSH_PUBLIC_KEY}" ]; then
